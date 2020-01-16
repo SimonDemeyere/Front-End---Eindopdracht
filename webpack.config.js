@@ -36,6 +36,11 @@ module.exports = function(){
         filename: 'store.html',
         template: path.resolve('./src/store.html')
       }),
+      new HtmlWebpackPlugin({
+        title: 'Musician Detail | Shop',
+        filename: 'detail.html',
+        template: path.resolve('./src/detail.html')
+      }),
       new webpack.HotModuleReplacementPlugin()
     ],
     module: {
