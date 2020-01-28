@@ -20,6 +20,32 @@ icon.onclick = function () {
     }
 };
 
+// $('.nav-tabs').on('shown.bs.tab', 'a', function (e) {
+//     if (e.relatedTarget) {
+//         $(e.relatedTarget).removeClass('active');
+//     }
+// })
+
+/*
+let navTabs = document.getElementsByClassName('nav-tab');
+navTabs.onClick = function () {
+    if (navTabs.e.relatedTarget) {
+        navTabs.e.relatedTarget.removeClass('active');
+    }
+};
+*/
+
+
+
+
+// Scroll Scroll Scroll Scroll
+if ($('bg-home')) {
+    $(window).scroll(function(){
+        $('nav').toggleClass('scrolled', $(this).scrollTop() > $(window).height());
+    });
+}
+
+
 // Filters Click
 instrumentFilter.onclick = function () {
     if (instrumentfilterDiv.style.display == 'block') {

@@ -23,7 +23,7 @@
                     <a class="nav-link" href="store.html">Store<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="checkout.html">Checkout</a>
                 </li>
             </ul>
             <ul class="navbar-nav mr-auto mr-lg-0">
@@ -35,7 +35,64 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link d-lg-none" href="#">Shop Cart</a>
-                    <i class="d-none d-lg-block fas fa-shopping-cart"></i>
+                    <ul class="nav navbar-nav navbar-right d-none d-lg-block">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span
+                                    class="glyphicon glyphicon-shopping-cart"></span><i class="fas fa-shopping-cart"></i></span></a>
+                            <ul class="dropdown-menu dropdown-cart" role="menu">
+                                <li>
+                                    <div class="cart-img">
+                                        <img src="img/drum.jpg" alt="drum">
+                                    </div>
+                                    <div class="cart-title">
+                                        <p>Drum - Wood</p>
+                                        <p>€30290,00</p>
+                                    </div>
+                                    <div class="cart-remove">
+                                        <i class="fas fa-trash-alt red"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cart-img">
+                                        <img src="img/drum.jpg" alt="drum">
+                                    </div>
+                                    <div class="cart-title">
+                                        <p>Violin - Wood</p>
+                                        <p>€102932,95</p>
+                                    </div>
+                                    <div class="cart-remove">
+                                        <i class="fas fa-trash-alt red"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cart-img">
+                                        <img src="img/drum.jpg" alt="drum">
+                                    </div>
+                                    <div class="cart-title">
+                                        <p>Drum - Wood</p>
+                                        <p>€30290,00</p>
+                                    </div>
+                                    <div class="cart-remove">
+                                        <i class="fas fa-trash-alt red"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cart-img">
+                                        <img src="img/drum.jpg" alt="drum">
+                                    </div>
+                                    <div class="cart-title">
+                                        <p>Violin - Wood</p>
+                                        <p>€201,23</p>
+                                    </div>
+                                    <div class="cart-remove">
+                                        <i class="fas fa-trash-alt red"></i>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a id="cart-link" class="text-center" href="checkout.html">View Cart</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </li>
                 <li class="nav-item d-none d-lg-inline-block search">
                     <i id="search-icon" class="d-none d-lg-block fas fa-search"></i>
@@ -49,62 +106,69 @@
     <div class="row">
         <div class="col-10 offset-1 col-md-10 offset-md-1">
             <section id="block-detail">
-                <div id="detail-content">
-                    <header>
+                <div class="row">
+                    <div id="detail-header" class="col-12">
                         <h2>Drumstel - Wood</h2>
                         <div id="rating-review">
-                            <div id="ratings">
-                                <i class="rating-star fas fa-star"></i>
-                                <i class="rating-star fas fa-star"></i>
-                                <i class="rating-star fas fa-star"></i>
-                                <i class="rating-star far fa-star"></i>
-                                <i class="rating-star far fa-star"></i>
+                            <div id="detail-info">
+                                <div class="ratings">
+                                    <i class="rating-star fas fa-star"></i>
+                                    <i class="rating-star fas fa-star"></i>
+                                    <i class="rating-star fas fa-star"></i>
+                                    <i class="rating-star far fa-star"></i>
+                                    <i class="rating-star far fa-star"></i>
+                                </div>
+                                <div id="review-counter">
+                                    <p id="review-count">1 review(s)</p>
+                                </div>
                             </div>
-                            <div id="review-counter">
-                                <p id="review-count">1 review(s)</p>
+                            <div id="content-filters">
+                                <p id="content-brand">Mapex</p>
+                                <p id="content-specifications">Black, Cymbals</p>
                             </div>
-                        </div>
-                        <p id="price">€2192,00</p>
-<!--                        <p id="stock">In-stock</p>-->
-                    </header>
-                    <div id="content-description">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium ad at, culpa cum cupiditate dolor dolore
-                            est eveniet inventore, iste magnam mollitia nam obcaecati perferendis quas recusandae veniam voluptates?</p>
+                         </div>
+                            <!--                        <p id="stock">In-stock</p>-->
                     </div>
-                    <div id="content-filters">
-                        <p id="content-brand">Mapex</p>
-                        <p id="content-specifications">Black, Cymbals</p>
-                    </div>
-                </div>
-                <div id="detail-image">
-                    <div id="image-main">
-                        <img src="img/drum.jpg" alt="drum">
-                    </div>
-                    <div id="image-diff">
-                        <div class="image-diff-box">
-                            <img src="img/piano.jpg" alt="piano">
-                        </div>
-                        <div class="image-diff-box">
-                            <img src="img/violin.jpg" alt="violin">
-                        </div>
-                        <div class="image-diff-box">
-                            <img src="img/drum.jpg" alt="drum">
-                        </div>
-                    </div>
-                </div>
-                <div id="content-buy">
-                    <form action="checkout.html" method="POST">
-                        <div id="input-quantity">
-                            <div class="input-group-prepend">
-                                <span class="btn btn-dark btn-sm" id="minus-btn"><i class="fa fa-minus"></i></span>
-                            </div>
-                            <input type="number" id="qty_input" class="form-control form-control-sm" value="1" min="1">
-                            <div class="input-group-prepend">
-                                <span class="btn btn-dark btn-sm" id="plus-btn"><i class="fa fa-plus"></i></span>
+                    <div id="detail-helper">
+                        <div id="detail-content" class="">
+                            <div id="content-description">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium ad at, culpa cum cupiditate dolor dolore
+                                    est eveniet inventore, iste magnam mollitia nam obcaecati perferendis quas recusandae veniam voluptates?</p>
                             </div>
                         </div>
-                        <button type="submit" id="submit">ADD TO CART</button>
-                    </form>
+                        <div id="detail-image" class="">
+                            <div id="image-main">
+                                <img src="img/drum.jpg" alt="drum">
+                            </div>
+                            <div id="image-diff">
+                                <div class="image-diff-box">
+                                    <img src="img/piano.jpg" alt="piano">
+                                </div>
+                                <div class="image-diff-box">
+                                    <img src="img/violin.jpg" alt="violin">
+                                </div>
+                                <div class="image-diff-box">
+                                    <img src="img/drum.jpg" alt="drum">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="content-buy" class="">
+                            <form action="checkout.html" method="POST">
+                                <p id="price">€2192,00</p>
+                                <div id="input-quantity">
+                                    <div class="input-group-prepend">
+                                        <span class="btn btn-dark btn-sm" id="minus-btn"><i class="fa fa-minus"></i></span>
+                                    </div>
+                                    <input type="number" id="qty_input" class="form-control form-control-sm" value="1" min="1">
+                                    <div class="input-group-prepend">
+                                        <span class="btn btn-dark btn-sm" id="plus-btn"><i class="fa fa-plus"></i></span>
+                                    </div>
+                                </div>
+                                <!--                            <a href="checkout.html" class="submit">ADD TO CART</a>-->
+                                <button type="submit" class="submit">ADD TO CART</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section id="block-related-products">
@@ -283,14 +347,81 @@
                     <h2>Reviews</h2>
                 </header>
                 <div id="reviews-container">
-                    <article class="review">
-                        <header>
-                            <div id="img-holder">
-                                <img src="img/face.jpg" alt="mijnHoofd">
-                            </div>
-                            <h2>Simon Demeyere</h2>
-                        </header>
-                    </article>
+                    <nav id="review-tabs">
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link active" id="nav-read-tab" data-toggle="tab" href="#nav-read" role="tab" aria-controls="nav-read"
+                               aria-selected="true">Show all reviews</a>
+                            <a class="nav-item nav-link" id="nav-write-tab" data-toggle="tab" href="#nav-write" role="tab" aria-controls="nav-write"
+                               aria-selected="false">Write review</a>
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-read" role="tabpanel" aria-labelledby="nav-read-tab">
+                            <article class="review">
+                                <header>
+                                    <div class="img-holder">
+                                        <img src="img/face.jpg" alt="mijnHoofd">
+                                    </div>
+                                    <h2>Simon Demeyere</h2>
+                                </header>
+                                <div class="review-content">
+                                    <div class="review-ratings" class="ratings">
+                                        <i class="rating-star fas fa-star"></i>
+                                        <i class="rating-star fas fa-star"></i>
+                                        <i class="rating-star fas fa-star"></i>
+                                        <i class="rating-star far fa-star"></i>
+                                        <i class="rating-star far fa-star"></i>
+                                    </div>
+                                    <div class="review-writing">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut culpa deserunt eligendi et eum exercitationem harum impedit iste libero maiores minus non omnis, praesentium quibusdam quo repellendus reprehenderit suscipit voluptatibus.</p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="review">
+                                <header>
+                                    <div class="img-holder">
+                                        <img src="img/face.jpg" alt="mijnHoofd">
+                                    </div>
+                                    <h2>Pieter Vanbesien</h2>
+                                </header>
+                                <div class="review-content">
+                                    <div class="review-ratings" class="ratings">
+                                        <i class="rating-star fas fa-star"></i>
+                                        <i class="rating-star fas fa-star"></i>
+                                        <i class="rating-star fas fa-star"></i>
+                                        <i class="rating-star far fa-star"></i>
+                                        <i class="rating-star far fa-star"></i>
+                                    </div>
+                                    <div class="review-writing">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut culpa deserunt eligendi et eum exercitationem harum impedit iste libero maiores minus non omnis, praesentium quibusdam quo repellendus reprehenderit suscipit voluptatibus.</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="tab-pane fade" id="nav-write" role="tabpanel" aria-labelledby="nav-write-tab">
+                            <form action="" id="review-write">
+                                <div class="review-write-holder">
+                                    <label for="review-write-subject">Title</label>
+                                    <input type="text" id="review-write-subject" name="review-subject">
+                                </div>
+                                <div class="review-write-holder">
+                                    <label for="review-write-rating">Rate your product</label>
+                                    <select name="review-rating" id="review-write-rating">
+                                        <option value="1">1 Ster</option>
+                                        <option value="2">2 Sterren</option>
+                                        <option value="3">3 Sterren</option>
+                                        <option value="4">4 Sterren</option>
+                                        <option value="5">5 Sterren</option>
+                                    </select>
+                                </div>
+                                <div class="review-write-holder">
+                                    <label for="review-write-content">Message</label>
+                                    <textarea maxlength="250" name="review-content" id="review-write-content" cols="30" rows="10"></textarea>
+                                </div>
+                                <button type="submit" class="submit">Post review</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
@@ -311,10 +442,13 @@
                             <a href="index.html">Home</a>
                         </li>
                         <li>
-                            <a href="#">Store</a>
+                            <a href="store.html">Store</a>
                         </li>
                         <li>
-                            <a href="#">Contact</a>
+                            <a href="detail.html">Detail</a>
+                        </li>
+                        <li>
+                            <a href="checkout.html">Checkout</a>
                         </li>
                     </ul>
                 </div>

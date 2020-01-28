@@ -23,7 +23,7 @@
                     <a class="nav-link" href="#">Store<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="checkout.html">Checkout</a>
                 </li>
             </ul>
             <ul class="navbar-nav mr-auto mr-lg-0">
@@ -35,7 +35,64 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link d-lg-none" href="#">Shop Cart</a>
-                    <i class="d-none d-lg-block fas fa-shopping-cart"></i>
+                    <ul class="nav navbar-nav navbar-right d-none d-lg-block">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span
+                                    class="glyphicon glyphicon-shopping-cart"></span><i class="fas fa-shopping-cart"></i></span></a>
+                            <ul class="dropdown-menu dropdown-cart" role="menu">
+                                <li>
+                                    <div class="cart-img">
+                                        <img src="img/drum.jpg" alt="drum">
+                                    </div>
+                                    <div class="cart-title">
+                                        <p>Drum - Wood</p>
+                                        <p>€30290,00</p>
+                                    </div>
+                                    <div class="cart-remove">
+                                        <i class="fas fa-trash-alt red"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cart-img">
+                                        <img src="img/drum.jpg" alt="drum">
+                                    </div>
+                                    <div class="cart-title">
+                                        <p>Violin - Wood</p>
+                                        <p>€102932,95</p>
+                                    </div>
+                                    <div class="cart-remove">
+                                        <i class="fas fa-trash-alt red"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cart-img">
+                                        <img src="img/drum.jpg" alt="drum">
+                                    </div>
+                                    <div class="cart-title">
+                                        <p>Drum - Wood</p>
+                                        <p>€30290,00</p>
+                                    </div>
+                                    <div class="cart-remove">
+                                        <i class="fas fa-trash-alt red"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cart-img">
+                                        <img src="img/drum.jpg" alt="drum">
+                                    </div>
+                                    <div class="cart-title">
+                                        <p>Violin - Wood</p>
+                                        <p>€201,23</p>
+                                    </div>
+                                    <div class="cart-remove">
+                                        <i class="fas fa-trash-alt red"></i>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a id="cart-link" class="text-center" href="checkout.html">View Cart</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </li>
                 <li class="nav-item d-none d-lg-inline-block search">
                     <i id="search-icon" class="d-none d-lg-block fas fa-search"></i>
@@ -76,32 +133,34 @@
                     </div>
                 </div>
                 <div id="block-shop-items">
-                    <article class="item">
-                        <header class="item-header">
-                            <img class="item-header-img" src="img/drum.jpg" alt="drum">
-                        </header>
-                        <div class="item-content">
-                            <p class="item-content-category">Bestselling, Drums</p>
-                            <h3 class="item-content-title">Drumstel - Wood</h3>
-                            <p class="item-content-price">€879,95</p>
-                            <div class="item-hover">
-                                <div class="item-hover-rating d-flex justify-content-center">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
-                                <p class="item-hover-description">Drum van hoge kwaliteit en veel kabaal. Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit.</p>
-                                <div class="item-hover-btns d-flex justify-content-between">
-                                    <a href="#"
-                                       class="item-hover-favorite d-flex align-items-center justify-content-center"><i class="fas fa-heart"></i></a>
-                                    <a href="detail.html" class="item-hover-buy">BUY NOW</a>
+                    <a href="detail.html" class="mobile-only">
+                        <article class="item">
+                            <header class="item-header">
+                                <img class="item-header-img" src="img/drum.jpg" alt="drum">
+                            </header>
+                            <div class="item-content">
+                                <p class="item-content-category">Bestselling, Drums</p>
+                                <h3 class="item-content-title">Drumstel - Wood</h3>
+                                <p class="item-content-price">€879,95</p>
+                                <div class="item-hover">
+                                    <div class="item-hover-rating d-flex justify-content-center">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <p class="item-hover-description">Drum van hoge kwaliteit en veel kabaal. Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit.</p>
+                                    <div class="item-hover-btns d-flex justify-content-between">
+                                        <a href="#"
+                                           class="item-hover-favorite d-flex align-items-center justify-content-center"><i class="fas fa-heart"></i></a>
+                                        <a href="detail.html" class="item-hover-buy">BUY NOW</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </article>
+                        </article>
+                    </a>
                     <article class="item">
                         <header class="item-header">
                             <img class="item-header-img" src="img/drum.jpg" alt="drum">
@@ -408,10 +467,13 @@
                             <a href="index.html">Home</a>
                         </li>
                         <li>
-                            <a href="#">Store</a>
+                            <a href="store.html">Store</a>
                         </li>
                         <li>
-                            <a href="#">Contact</a>
+                            <a href="detail.html">Detail</a>
+                        </li>
+                        <li>
+                            <a href="checkout.html">Checkout</a>
                         </li>
                     </ul>
                 </div>
