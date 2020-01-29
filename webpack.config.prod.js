@@ -8,9 +8,9 @@ const path = require('path');
 module.exports = function (env, argv) {
   return {
     mode: 'production',
-    entry: [
-      './src/app.js'
-    ],
+    entry: {
+      app:'./src/app.js'
+    },
 
     optimization: {
       minimizer: [
@@ -22,11 +22,28 @@ module.exports = function (env, argv) {
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
         title: 'Webpack starter project',
+        filename:'index.html',
+        chunks: ['app'],
         template: path.resolve('./src/index.html')
+
       }),
       new HtmlWebpackPlugin({
-        title: 'Webpack starter project',
-        template: path.resolve('./src/store.html')
+        title: 'My Awesome application',
+        template: path.resolve('./src/store.html'),
+        chunks: ['app'],
+        filename: 'store.html'
+      }),
+      new HtmlWebpackPlugin({
+        title: 'My Awesome application',
+        template: path.resolve('./src/detail.html'),
+        chunks: ['app'],
+        filename: 'detail.html'
+      }),
+      new HtmlWebpackPlugin({
+        title: 'My Awesome application',
+        template: path.resolve('./src/checkout.html'),
+        chunks: ['app'],
+        filename: 'checkout.html'
       }),
       new MiniCssExtractPlugin({
         filename: "[name].css",
@@ -62,7 +79,7 @@ module.exports = function (env, argv) {
               options: {
                 name: "[name].[ext]",
                 outputPath:'fonts/',
-
+                esModule: false,
               }
             }
           ]
@@ -73,7 +90,7 @@ module.exports = function (env, argv) {
             {
               loader: "file-loader",
               options: {
-                outputPath: 'img/',
+                outputPath: 'images/',
                 name: "[name].[ext]",
                 esModule: false,
               },

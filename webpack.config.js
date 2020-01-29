@@ -1,13 +1,19 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = function(){
   return {
     mode: 'development',
-    entry: [
-      './src/app.js'
-    ],
+    entry: {
+      app:'./src/app.js',
+      js: './src/js/main.js',
+    },
+    output: {
+      filename: 'app.js',
+      path: path.resolve(__dirname, 'dist'),
+    },
     watch: true,
     watchOptions: {
       aggregateTimeout: 300, // Process all changes which happened in this time into one rebuild
@@ -26,26 +32,35 @@ module.exports = function(){
       inline: true
     },
     plugins: [
+      new CopyPlugin([
+        { from: 'src/fonts', to: 'dist' },
+        { from: 'src/img', to: 'dist' },
+      ]),
       new HtmlWebpackPlugin({
-        title: 'Musician Store',
-        filename: 'index.html',
-        template: path.resolve('./src/index.html')
+        title: 'Webpack starter project',
+        filename:'index.html',
+        chunks: ['app'],
+       template: path.resolve('./src/index.html')
+
       }),
       new HtmlWebpackPlugin({
-        title: 'Musician Store | Shop',
-        filename: 'store.html',
-        template: path.resolve('./src/store.html')
+        title: 'My Awesome application',
+        template: path.resolve('./src/store.html'),
+        chunks: ['app'],
+        filename: 'store.html'
       }),
       new HtmlWebpackPlugin({
-        title: 'Musician Detail | Detail',
-        filename: 'detail.html',
-        template: path.resolve('./src/detail.html')
+        title: 'My Awesome application',
+        template: path.resolve('./src/detail.html'),
+        chunks: ['app'],
+        filename: 'detail.html'
       }),
-        new HtmlWebpackPlugin({
-            title: 'Musician Detail | Checkout',
-            filename: 'checkout.html',
-            template: path.resolve('./src/checkout.html')
-        }),
+      new HtmlWebpackPlugin({
+        title: 'My Awesome application',
+        template: path.resolve('./src/checkout.html'),
+        chunks: ['app'],
+        filename: 'checkout.html'
+      }),
       new webpack.ProvidePlugin({
         $: "jquery",
         jQuery: "jquery"
@@ -56,11 +71,23 @@ module.exports = function(){
       rules: [
         {
           test: /\.scss$/,
-          use: [
-            'style-loader',
-            "css-loader",
-            "sass-loader"
-          ]
+          use: [{
+            loader: 'style-loader', // inject CSS to page
+          }, {
+            loader: 'css-loader', // translates CSS into CommonJS modules
+          }, {
+            loader: 'postcss-loader', // Run post css actions
+            options: {
+              plugins: function () { // post css plugins, can be exported to postcss.config.js
+                return [
+                  require('precss'),
+                  require('autoprefixer')
+                ];
+              }
+            }
+          }, {
+            loader: 'sass-loader' // compiles Sass to CSS
+          }]
         },
         {
           test: /\.m?js$/,
@@ -76,7 +103,7 @@ module.exports = function(){
           test: /\.(jpg|jpeg|gif|png|svg|webp)$/,
           use: [
             {
-              loader: "file-loader",
+              loader: "url-loader",
               options: {
                 outputPath: 'img/',
                 name: "[name].[ext]",
@@ -93,6 +120,7 @@ module.exports = function(){
               options: {
                 name: "[name].[ext]",
                 outputPath:'fonts/',
+                esModule: false,
               }
             }
           ]

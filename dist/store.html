@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Musician Store | Shop</title>
+<link href="app.css" rel="stylesheet"></head>
+<body>
+<header id="header" class="d-lg-flex flex-lg-column justify-content-lg-center">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
+        <a class="navbar-brand" href="#">Musician Store <span class="d-none d-lg-inline">|</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-lg-flex justify-content-lg-between" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto mr-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Store<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="checkout.html">Checkout</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav mr-auto mr-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-lg-none" href="#">Shop Cart</a>
+                    <ul class="nav navbar-nav navbar-right d-none d-lg-block">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span
+                                    class="glyphicon glyphicon-shopping-cart"></span><i class="fas fa-shopping-cart"></i></span></a>
+                            <ul class="dropdown-menu dropdown-cart" role="menu">
+                                <li>
+                                    <div class="cart-img">
+                                        <img src="images/drum.jpg" alt="drum">
+                                    </div>
+                                    <div class="cart-title">
+                                        <p>Drum - Wood</p>
+                                        <p>€30290,00</p>
+                                    </div>
+                                    <div class="cart-remove">
+                                        <i class="fas fa-trash-alt red"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cart-img">
+                                        <img src="images/drum.jpg" alt="drum">
+                                    </div>
+                                    <div class="cart-title">
+                                        <p>Violin - Wood</p>
+                                        <p>€102932,95</p>
+                                    </div>
+                                    <div class="cart-remove">
+                                        <i class="fas fa-trash-alt red"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cart-img">
+                                        <img src="images/drum.jpg" alt="drum">
+                                    </div>
+                                    <div class="cart-title">
+                                        <p>Drum - Wood</p>
+                                        <p>€30290,00</p>
+                                    </div>
+                                    <div class="cart-remove">
+                                        <i class="fas fa-trash-alt red"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cart-img">
+                                        <img src="images/drum.jpg" alt="drum">
+                                    </div>
+                                    <div class="cart-title">
+                                        <p>Violin - Wood</p>
+                                        <p>€201,23</p>
+                                    </div>
+                                    <div class="cart-remove">
+                                        <i class="fas fa-trash-alt red"></i>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a id="cart-link" class="text-center" href="checkout.html">View Cart</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item d-none d-lg-inline-block search">
+                    <i id="search-icon" class="d-none d-lg-block fas fa-search"></i>
+                    <input type="text" id="searchInput" class="" placeholder="Search..">
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-10 offset-md-1">
+            <section id="block-shop">
+                <header>
+                    <h2>Browse all items</h2>
+                </header>
+                <div id="block-filter">
+                    <ul id="filter-list">
+                        <li id="instrument-filter" class="filter-list-item">Instrument</li>
+                        <li id="brand-filter" class="filter-list-item category-desktop">Merk</li>
+                        <li id="price-filter" class="filter-list-item">Prijs</li>
+                        <li id="material-filter" class="filter-list-item category-desktop">Materiaal</li>
+                        <li id="others-filter" class="filter-list-item category-mobile">Andere filters</li>
+                    </ul>
+                    <div id="show-filter">
+                        <div id="instrument-filter-option">
+                            <select name="instruments" id="instruments">
+                                <option value="drum">Drum</option>
+                                <option value="violin">Violin</option>
+                                <option value="piano">Piano</option>
+                                <option value="guitar">Guitar</option>
+                            </select>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="price-filter-option">
+                            <!--                        content coming-->
+                        </div>
+                    </div>
+                </div>
+                <div id="block-shop-items">
+                    <a href="detail.html" class="mobile-only">
+                        <article class="item">
+                            <header class="item-header">
+                                <img class="item-header-img" src="images/drum.jpg" alt="drum">
+                            </header>
+                            <div class="item-content">
+                                <p class="item-content-category">Bestselling, Drums</p>
+                                <h3 class="item-content-title">Drumstel - Wood</h3>
+                                <p class="item-content-price">€879,95</p>
+                                <div class="item-hover">
+                                    <div class="item-hover-rating d-flex justify-content-center">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <p class="item-hover-description">Drum van hoge kwaliteit en veel kabaal. Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit.</p>
+                                    <div class="item-hover-btns d-flex justify-content-between">
+                                        <a href="#"
+                                           class="item-hover-favorite d-flex align-items-center justify-content-center"><i class="fas fa-heart"></i></a>
+                                        <a href="detail.html" class="item-hover-buy">BUY NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                    <article class="item">
+                        <header class="item-header">
+                            <img class="item-header-img" src="images/drum.jpg" alt="drum">
+                        </header>
+                        <div class="item-content">
+                            <p class="item-content-category">Bestselling, Drums</p>
+                            <h3 class="item-content-title">Drumstel - Wood</h3>
+                            <p class="item-content-price">€879,95</p>
+                            <div class="item-hover">
+                                <div class="item-hover-rating d-flex justify-content-center">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <p class="item-hover-description">Drum van hoge kwaliteit en veel kabaal. Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit.</p>
+                                <div class="item-hover-btns d-flex justify-content-between">
+                                    <a href="#"
+                                       class="item-hover-favorite d-flex align-items-center justify-content-center"><i class="fas fa-heart"></i></a>
+                                    <a href="#" class="item-hover-buy">BUY NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="item">
+                        <header class="item-header">
+                            <img class="item-header-img" src="images/drum.jpg" alt="drum">
+                        </header>
+                        <div class="item-content">
+                            <p class="item-content-category">Bestselling, Drums</p>
+                            <h3 class="item-content-title">Drumstel - Wood</h3>
+                            <p class="item-content-price">€879,95</p>
+                            <div class="item-hover">
+                                <div class="item-hover-rating d-flex justify-content-center">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <p class="item-hover-description">Drum van hoge kwaliteit en veel kabaal. Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit.</p>
+                                <div class="item-hover-btns d-flex justify-content-between">
+                                    <a href="#"
+                                       class="item-hover-favorite d-flex align-items-center justify-content-center"><i class="fas fa-heart"></i></a>
+                                    <a href="#" class="item-hover-buy">BUY NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="item">
+                        <header class="item-header">
+                            <img class="item-header-img" src="images/drum.jpg" alt="drum">
+                        </header>
+                        <div class="item-content">
+                            <p class="item-content-category">Bestselling, Drums</p>
+                            <h3 class="item-content-title">Drumstel - Wood</h3>
+                            <p class="item-content-price">€879,95</p>
+                            <div class="item-hover">
+                                <div class="item-hover-rating d-flex justify-content-center">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <p class="item-hover-description">Drum van hoge kwaliteit en veel kabaal. Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit.</p>
+                                <div class="item-hover-btns d-flex justify-content-between">
+                                    <a href="#"
+                                       class="item-hover-favorite d-flex align-items-center justify-content-center"><i class="fas fa-heart"></i></a>
+                                    <a href="#" class="item-hover-buy">BUY NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="item">
+                        <header class="item-header">
+                            <img class="item-header-img" src="images/drum.jpg" alt="drum">
+                        </header>
+                        <div class="item-content">
+                            <p class="item-content-category">Bestselling, Drums</p>
+                            <h3 class="item-content-title">Drumstel - Wood</h3>
+                            <p class="item-content-price">€879,95</p>
+                            <div class="item-hover">
+                                <div class="item-hover-rating d-flex justify-content-center">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <p class="item-hover-description">Drum van hoge kwaliteit en veel kabaal. Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit.</p>
+                                <div class="item-hover-btns d-flex justify-content-between">
+                                    <a href="#"
+                                       class="item-hover-favorite d-flex align-items-center justify-content-center"><i class="fas fa-heart"></i></a>
+                                    <a href="#" class="item-hover-buy">BUY NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="item">
+                        <header class="item-header">
+                            <img class="item-header-img" src="images/drum.jpg" alt="drum">
+                        </header>
+                        <div class="item-content">
+                            <p class="item-content-category">Bestselling, Drums</p>
+                            <h3 class="item-content-title">Drumstel - Wood</h3>
+                            <p class="item-content-price">€879,95</p>
+                            <div class="item-hover">
+                                <div class="item-hover-rating d-flex justify-content-center">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <p class="item-hover-description">Drum van hoge kwaliteit en veel kabaal. Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit.</p>
+                                <div class="item-hover-btns d-flex justify-content-between">
+                                    <a href="#"
+                                       class="item-hover-favorite d-flex align-items-center justify-content-center"><i class="fas fa-heart"></i></a>
+                                    <a href="#" class="item-hover-buy">BUY NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="item">
+                        <header class="item-header">
+                            <img class="item-header-img" src="images/drum.jpg" alt="drum">
+                        </header>
+                        <div class="item-content">
+                            <p class="item-content-category">Bestselling, Drums</p>
+                            <h3 class="item-content-title">Drumstel - Wood</h3>
+                            <p class="item-content-price">€879,95</p>
+                            <div class="item-hover">
+                                <div class="item-hover-rating d-flex justify-content-center">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <p class="item-hover-description">Drum van hoge kwaliteit en veel kabaal. Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit.</p>
+                                <div class="item-hover-btns d-flex justify-content-between">
+                                    <a href="#"
+                                       class="item-hover-favorite d-flex align-items-center justify-content-center"><i class="fas fa-heart"></i></a>
+                                    <a href="#" class="item-hover-buy">BUY NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="item">
+                        <header class="item-header">
+                            <img class="item-header-img" src="images/drum.jpg" alt="drum">
+                        </header>
+                        <div class="item-content">
+                            <p class="item-content-category">Bestselling, Drums</p>
+                            <h3 class="item-content-title">Drumstel - Wood</h3>
+                            <p class="item-content-price">€879,95</p>
+                            <div class="item-hover">
+                                <div class="item-hover-rating d-flex justify-content-center">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <p class="item-hover-description">Drum van hoge kwaliteit en veel kabaal. Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit.</p>
+                                <div class="item-hover-btns d-flex justify-content-between">
+                                    <a href="#"
+                                       class="item-hover-favorite d-flex align-items-center justify-content-center"><i class="fas fa-heart"></i></a>
+                                    <a href="#" class="item-hover-buy">BUY NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="item">
+                        <header class="item-header">
+                            <img class="item-header-img" src="images/drum.jpg" alt="drum">
+                        </header>
+                        <div class="item-content">
+                            <p class="item-content-category">Bestselling, Drums</p>
+                            <h3 class="item-content-title">Drumstel - Wood</h3>
+                            <p class="item-content-price">€879,95</p>
+                            <div class="item-hover">
+                                <div class="item-hover-rating d-flex justify-content-center">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <p class="item-hover-description">Drum van hoge kwaliteit en veel kabaal. Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit.</p>
+                                <div class="item-hover-btns d-flex justify-content-between">
+                                    <a href="#"
+                                       class="item-hover-favorite d-flex align-items-center justify-content-center"><i class="fas fa-heart"></i></a>
+                                    <a href="#" class="item-hover-buy">BUY NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="item">
+                        <header class="item-header">
+                            <img class="item-header-img" src="images/drum.jpg" alt="drum">
+                        </header>
+                        <div class="item-content">
+                            <p class="item-content-category">Bestselling, Drums</p>
+                            <h3 class="item-content-title">Drumstel - Wood</h3>
+                            <p class="item-content-price">€879,95</p>
+                            <div class="item-hover">
+                                <div class="item-hover-rating d-flex justify-content-center">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <p class="item-hover-description">Drum van hoge kwaliteit en veel kabaal. Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit.</p>
+                                <div class="item-hover-btns d-flex justify-content-between">
+                                    <a href="#"
+                                       class="item-hover-favorite d-flex align-items-center justify-content-center"><i class="fas fa-heart"></i></a>
+                                    <a href="#" class="item-hover-buy">BUY NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="item">
+                        <header class="item-header">
+                            <img class="item-header-img" src="images/drum.jpg" alt="drum">
+                        </header>
+                        <div class="item-content">
+                            <p class="item-content-category">Bestselling, Drums</p>
+                            <h3 class="item-content-title">Drumstel - Wood</h3>
+                            <p class="item-content-price">€879,95</p>
+                            <div class="item-hover">
+                                <div class="item-hover-rating d-flex justify-content-center">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <p class="item-hover-description">Drum van hoge kwaliteit en veel kabaal. Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit.</p>
+                                <div class="item-hover-btns d-flex justify-content-between">
+                                    <a href="#"
+                                       class="item-hover-favorite d-flex align-items-center justify-content-center"><i class="fas fa-heart"></i></a>
+                                    <a href="#" class="item-hover-buy">BUY NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="item">
+                        <header class="item-header">
+                            <img class="item-header-img" src="images/drum.jpg" alt="drum">
+                        </header>
+                        <div class="item-content">
+                            <p class="item-content-category">Bestselling, Drums</p>
+                            <h3 class="item-content-title">Drumstel - Wood</h3>
+                            <p class="item-content-price">€879,95</p>
+                            <div class="item-hover">
+                                <div class="item-hover-rating d-flex justify-content-center">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <p class="item-hover-description">Drum van hoge kwaliteit en veel kabaal. Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit.</p>
+                                <div class="item-hover-btns d-flex justify-content-between">
+                                    <a href="#"
+                                       class="item-hover-favorite d-flex align-items-center justify-content-center"><i class="fas fa-heart"></i></a>
+                                    <a href="#" class="item-hover-buy">BUY NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="row footer-content">
+        <div class="col-12 footer-brand">
+            <p id="brand">Musician Store</p>
+            <p>We create a new world for the musicians.</p>
+        </div>
+        <div class="col-12 col-lg-5 footer-explore">
+            <div class="row">
+                <p class="col-12 footer-title">EXPLORE</p>
+                <div class="col-6">
+                    <ul class="footer-list">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="store.html">Store</a>
+                        </li>
+                        <li>
+                            <a href="detail.html">Detail</a>
+                        </li>
+                        <li>
+                            <a href="checkout.html">Checkout</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <ul class="footer-list">
+                        <li>
+                            <a href="#">Login</a>
+                        </li>
+                        <li>
+                            <a href="#">Register</a>
+                        </li>
+                        <li>
+                            <a href="#">Shop Cart</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-5 footer-place">
+            <div class="row">
+                <p class="col-12 footer-title">CONTACT</p>
+                <div class="col-6">
+                    <ul class="footer-list">
+                        <li>ADDRESS</li>
+                        <li>Streetname 214</li>
+                        <li>8567 Cityname</li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <ul class="footer-list">
+                        <li>INFO</li>
+                        <li>Phone: 768/193.103.043</li>
+                        <li>Email: info@musicianstore.be</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-2 footer-place">
+            <div class="row">
+                <div class="col">
+                    <p class="footer-title">SOCIAL</p>
+                    <ul class="footer-list">
+                        <li>FIND US ON</li>
+                        <li><i class="fab fa-facebook-f"></i><a href="#"> #musicianstore</a></li>
+                        <li><i class="fab fa-instagram"></i><a href="#"> #musicianstore</a></li>
+                        <li><i class="fab fa-twitter"></i><a href="#"> #musicianstore</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<button id="topBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+<script type="text/javascript" src="app.js"></script></body>
+</html>
